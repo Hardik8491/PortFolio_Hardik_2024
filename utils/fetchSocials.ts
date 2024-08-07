@@ -1,5 +1,6 @@
-import { Social } from "@/typings";
+
 import axios from "axios";
+import { Social } from "../typings";
 
 export const fetchSocials = async () => {
     try {

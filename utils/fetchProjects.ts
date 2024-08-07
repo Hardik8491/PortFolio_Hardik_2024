@@ -1,5 +1,6 @@
-import { Project } from "@/typings";
+
 import axios from "axios";
+import { Project } from "../typings";
 
 export const fetchProjects = async () => {
     try {

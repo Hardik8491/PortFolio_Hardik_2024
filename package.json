@@ -24,6 +24,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",
+    "react-social-icons": "^6.17.0",
     "react-three-fiber": "^6.0.13",
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.77.8",

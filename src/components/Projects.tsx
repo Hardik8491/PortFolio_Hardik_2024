@@ -1,11 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
+//@ts-nocheck
 "use client";
 
-import { urlFor } from "@/sanity";
-import { Project } from "@/typings";
+;
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Skill from "./Skill";
+import { urlFor } from "../../sanity";
+import { Project } from "../../typings";
 
 type Props = {
     projects: Project[] | null;

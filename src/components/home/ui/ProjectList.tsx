@@ -1,8 +1,9 @@
 "use client";
 import Column from "@/components/core/Column";
 import Row from "@/components/core/Row";
-import { Project } from "@/typings";
+
 import ProjectItem from "./ProjectItem";
+import { Project } from "../../../../typings";
 
 const ProjectList = ({ projects }: Readonly<{ projects: Project[] }>) => {
     return (

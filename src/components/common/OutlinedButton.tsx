@@ -1,6 +1,7 @@
+//@ts-nocheck
 "use client";
 
-import type { ButtonComponentProps } from "@/types";
+import type { ButtonComponentProps } from "../../../types";
 
 const AppOutlinedButton = (props: Readonly<ButtonComponentProps>) => {
   const { label, onClick, classNames, name } = props;

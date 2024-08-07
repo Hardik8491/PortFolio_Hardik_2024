@@ -6,7 +6,7 @@ import Row from "@/components/core/Row";
 
 const AppBar = ({ children }: Readonly<{ children?: string | ReactNode }>) => {
   return (
-    <Row classNames="gap-4 items-center">
+    <Row className="gap-4 items-center">
       <Link href="/" className="p-0 m-0">
         <FontAwesomeIcon
           icon={faArrowLeft}

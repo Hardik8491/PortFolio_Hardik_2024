@@ -1,4 +1,4 @@
-import { INavItem, INavMenuItem } from "@/types";
+import { INavItem, INavMenuItem } from "../types";
 import {
   faHome,
   faUser,

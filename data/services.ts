@@ -1,4 +1,4 @@
-import { IServiceItem } from "@/types";
+import { IServiceItem } from "../types";
 
 const services: IServiceItem[] = [
   {

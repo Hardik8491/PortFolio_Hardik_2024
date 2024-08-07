@@ -1,5 +1,6 @@
-import { Education } from "@/typings";
+
 import axios from "axios";
+import { Education } from "../typings";
 
 export const fetchEducation = async () => {
     try {

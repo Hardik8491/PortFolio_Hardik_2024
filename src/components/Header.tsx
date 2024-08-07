@@ -1,10 +1,11 @@
+//@ts-nocheck
 "use client";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Social } from "@/typings";
-import { fetchSocials } from "@/utils/fetchSocials";
+import { Social } from "../../typings";
+
 type Props = {
     socials: Social[] | null;
 };

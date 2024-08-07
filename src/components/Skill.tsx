@@ -1,10 +1,10 @@
-import { urlFor } from "@/sanity";
-import { Skill } from "@/typings";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { urlFor } from "../../sanity";
 
 type Props = {
-    skill: Skill;
+    skill: any;
 };
 
 const Skill = ({ skill }: Props) => {

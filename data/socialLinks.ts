@@ -6,8 +6,9 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Strings from "@/constants/strings";
-import type { ISocialLinkItem } from "@/types";
+import { ISocialLinkItem } from "../types";
+import Strings from "../constants/strings";
+
 
 const socialLinks: ISocialLinkItem[] = [
   {

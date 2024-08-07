@@ -1,4 +1,4 @@
-import { IProjectItem, ProjectType, RepoType } from "@/types";
+import { IProjectItem, ProjectType, RepoType } from "../types";
 
 const projects: IProjectItem[] = [
   {

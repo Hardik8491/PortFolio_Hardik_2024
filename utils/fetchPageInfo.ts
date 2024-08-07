@@ -1,6 +1,6 @@
-import { urlFor } from "@/sanity";
-import { PageInfo, Skill } from "@/typings";
+
 import axios from "axios";
+import { PageInfo } from "../typings";
 
 export const fetchPageInfo = async () => {
     try {

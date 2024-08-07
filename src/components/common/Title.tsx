@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { textVariant } from "@/utils/motion";
+import { textVariant } from "../../../utils/motion";
+
 
 
 interface ITitle {

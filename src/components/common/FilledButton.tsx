@@ -1,6 +1,8 @@
+//@ts-nocheck
+
 "use client";
 
-import type { ButtonComponentProps } from "@/types";
+import type { ButtonComponentProps } from "../../../types";
 
 const AppFilledButton = (props: Readonly<ButtonComponentProps>) => {
   const { label, onClick, classNames, name } = props;
