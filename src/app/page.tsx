@@ -20,7 +20,6 @@ export default async function Home() {
     const education = await fetchEducation();
     const skillsSet = await fetchSkillSet();
     const projects = await fetchProjects();
-console.log(skillsSet);
 
     return (
         <main className="h-full w-full  bg-[url('/im2.jpg')] bg-cover md:bg-contain">
