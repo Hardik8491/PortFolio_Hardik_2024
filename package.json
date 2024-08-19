@@ -16,6 +16,7 @@
     "@heroicons/react": "^2.1.5",
     "@react-three/drei": "^9.109.2",
     "@sanity/image-url": "^1.0.2",
+    "axios": "^1.7.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
     "math-random": "^2.0.1",
