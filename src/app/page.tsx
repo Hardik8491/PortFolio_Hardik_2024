@@ -250,7 +250,7 @@ export default function Layout() {
         className="relative min-h-screen w-full overflow-x-hidden"
       >
         <motion.div
-          className="fixed inset-0 bg-[url('/im2.jpg')] bg-cover bg-center bg-no-repeat"
+          className="fixed inset-0 "
           style={{ y: backgroundY }}
         />
         <motion.div
