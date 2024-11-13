@@ -6,7 +6,9 @@ import nodemailer from 'nodemailer';
 
 
 export async function POST(request: NextRequest, res: NextApiResponse) {
+
      const reqBody = await request.json();
+     
     const { name, email, message } =reqBody;
   
       
