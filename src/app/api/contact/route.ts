@@ -1,13 +1,11 @@
-// pages/api/contact.ts
-import {  NextApiResponse } from 'next';
+
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 
 
-export async function POST(request: NextRequest, res: NextApiResponse) {
-
-     const reqBody = await request.json();
+export async function POST(req: NextRequest) {
+     const reqBody = await req.json();
      
     const { name, email, message } =reqBody;
   
