@@ -354,6 +354,8 @@ const skillsSet: SkillSet[] = [
 ]
 
 const EducationItem = ({ data, isActive, onClick }: { data: any; isActive: boolean; onClick: () => void }) => {
+  console.log(data);
+  
   return (
     <motion.div
       layout
@@ -366,7 +368,7 @@ const EducationItem = ({ data, isActive, onClick }: { data: any; isActive: boole
     >
       <Card className={`h-full transition-all duration-300 ${isActive ? 'ring-2 ring-primary' : ''} bg-background/50 backdrop-blur-sm border-primary/10`}>
         <CardContent className="p-6 flex flex-col items-center justify-between h-full">
-          <div className="text-center">
+          <div className="text-center flex items-center justify-center flex-col">
             <motion.div
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.5 }}
@@ -374,11 +376,11 @@ const EducationItem = ({ data, isActive, onClick }: { data: any; isActive: boole
             >
               <GraduationCap className="w-12 h-12 text-primary" />
             </motion.div>
-            <h3 className="text-lg font-semibold mb-2">{data.degree}</h3>
-            <p className="text-muted-foreground">{data.institution}</p>
+            <h3 className="text-lg font-semibold mb-2">{data.jobTitle}</h3>
+            <p className="text-muted-foreground">{data.company}</p>
           </div>
           <div className="mt-4 px-3 py-1 border border-primary text-primary rounded-full text-sm">
-            {data.startDate} - {data.endDate}
+            {data.dateStarted} - {data.dateEnded}
           </div>
           <AnimatePresence>
             {isActive && (
@@ -389,7 +391,7 @@ const EducationItem = ({ data, isActive, onClick }: { data: any; isActive: boole
                 transition={{ duration: 0.3 }}
                 className="mt-4 text-center"
               >
-                <p className="text-sm">{data.description}</p>
+                <p className="text-sm">{data.points || data.description}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -452,11 +454,11 @@ export default function EducationAndSkills({education,skillsSet}:{education:any,
     setActiveEducationIndex((prev) => (prev === null || prev === 0 ? education.length - 1 : prev - 1))
   }
 
-  const filteredSkills = skillsSet.filter((category: Category) =>
-    filter === 'All' || category.title === filter
+  const filteredSkills = skillsSet?.filter((category: Category) =>
+    filter === 'All' || category?.title === filter
   );
 
-  const allSkills = filteredSkills.flatMap((category: Category) =>
+  const allSkills = filteredSkills?.flatMap((category: Category) =>
     category.skills.filter((skill: Skill) =>
       skill.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
@@ -516,7 +518,7 @@ export default function EducationAndSkills({education,skillsSet}:{education:any,
             >
               All
             </Button>
-            {skillsSet.map((category: Category) => (
+            {skillsSet?.map((category: Category) => (
   <Button
     key={category.title}
     variant={filter === category.title ? 'default' : 'outline'}
@@ -538,7 +540,7 @@ export default function EducationAndSkills({education,skillsSet}:{education:any,
           </div>
 
           <AnimatePresence>
-            {filteredSkills.map((category:any) => (
+            {filteredSkills?.map((category:any) => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -553,9 +555,9 @@ export default function EducationAndSkills({education,skillsSet}:{education:any,
                       <span className="relative z-10">{category.title}</span>
                       <span className="absolute bottom-0 left-0 w-full h-2 bg-primary/20 -z-10"></span>
                     </h4>
-                    {category.skills.length > 0 && (
+                    {category?.skills.length > 0 && (
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        {category.skills.map((skill:any, index:any) => (
+                        {category?.skills.map((skill:any, index:any) => (
                           <SkillItem key={`${category.title}-skill-${index}`} data={skill} />
                         ))}
                       </div>
@@ -566,7 +568,7 @@ export default function EducationAndSkills({education,skillsSet}:{education:any,
             ))}
           </AnimatePresence>
 
-          {allSkills.length === 0 && (
+          {allSkills?.length === 0 && (
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

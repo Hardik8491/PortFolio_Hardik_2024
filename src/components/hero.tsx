@@ -158,7 +158,7 @@ export default function HeroSection({ pageInfo,socials}: Props) {
           initial={{ opacity: 0, y: 20 }}
           animate={controls}
         >
-          {pageInfo.name.split('').map((char, index) => (
+          {pageInfo?.name?.split('').map((char, index) => (
             <motion.span
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -175,7 +175,7 @@ export default function HeroSection({ pageInfo,socials}: Props) {
           animate={textControls}
         >
           <AnimatePresence>
-            {pageInfo.role.split(' ').map((word, index) => (
+            {pageInfo?.role?.split(' ').map((word, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 0, x: -20 }}

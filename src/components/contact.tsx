@@ -107,7 +107,7 @@ export default function Contact({contact}:{contact:any}) {
             Contact Me
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Let's connect! Whether you have a project in mind or just want to say hello, I'd love to hear from you.
+            Let&apos;s connect! Whether you have a project in mind or just want to say hello, I&apos;d love to hear from you.
           </p>
         </motion.div>
 
