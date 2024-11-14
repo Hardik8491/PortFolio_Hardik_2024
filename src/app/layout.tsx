@@ -6,6 +6,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Metadata } from "next";
+import StarsCanvas from "@/components/StarBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -85,7 +86,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+              <StarsCanvas />
               {children}
+
               
              
               <Toaster position="top-center" reverseOrder={false} />

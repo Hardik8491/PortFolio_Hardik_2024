@@ -148,7 +148,7 @@ export default function HeroSection({ pageInfo,socials}: Props) {
   }
 
   return (
-    <section ref={ref} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-background to-background/50">
+    <section ref={ref} className="relative  min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-background to-background/50 ">
       <motion.div
         style={{ y, opacity, scale }}
         className="z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
