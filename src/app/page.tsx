@@ -629,7 +629,7 @@ export default function EnhancedPortfolioLayout() {
                     }}
                     transition={{ type: 'spring', damping: 10, stiffness: 50 }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-40">
                     <section id="hero" className="min-h-screen snap-start pt-20">
                         <HeroSection pageInfo={pageInfo} socials={socials} />
                     </section>
